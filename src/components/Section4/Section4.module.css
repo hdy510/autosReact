@@ -1,0 +1,83 @@
+.section4 {
+  width: 100vw;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+}
+.section4 .spotlightBg {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  opacity: 0;
+}
+.section4 .spotlightBg img {
+  position: absolute;
+  bottom: -60%;
+}
+.strategyBox .imgBox {
+  position: absolute;
+  top: 50%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.strategyBox .imgBox img {}
+.strategyBox .txtBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  right: 37%;
+  transform: translate(50%, -50%);
+  opacity: 0;
+}
+.strategyBox.index0 .txtBox {
+  width: 560px;
+}
+.strategyBox.index1 .txtBox {
+  width: 650px;
+}
+.strategyBox.index2 .txtBox {
+  width: 600px;
+}
+.strategyBox.index3 .txtBox {
+  width: 700px;
+}
+.strategyBox .txtBox .indexBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 70px;
+}
+.strategyBox .txtBox .index {
+  color: #fff;
+  font-size: 26px;
+}
+.strategyBox .txtBox .bar {
+  background-color: var(--main-color);
+  width: 100%;
+  height: 2px;
+}
+.strategyBox .txtBox .title {
+  padding-bottom: 70px;
+}
+.strategyBox .txtBox .title p {
+  color: #fff;
+  font-size: 58px;
+  font-family: var(--pretendard-bold);
+}
+.strategyBox .txtBox .title span {
+  color: var(--main-color);
+}
+.strategyBox .txtBox .description {}
+.strategyBox .txtBox .description p {
+  color: #fff;
+  font-size: 20px;
+  font-family: var(--pretendard-semiBold);
+  word-break: keep-all;
+  line-height: 1.4;
+}
+.strategyBox .txtBox .description span {
+  color: var(--main-color);
+}

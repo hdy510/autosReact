@@ -1,0 +1,81 @@
+/* 언어설정 */
+@charset "UTF-8";
+
+/* 폰트설정 */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Medium';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-SemiBold';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Bold';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-ExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Black';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+/* 변수설정 */
+:root {
+  --main-color: #FF5722;
+  --pretendard-regular: 'Pretendard-Regular', sans-serif;
+  --pretendard-medium: 'Pretendard-Medium', sans-serif;
+  --pretendard-semiBold: 'Pretendard-SemiBold', sans-serif;
+  --pretendard-bold: 'Pretendard-Bold', sans-serif;
+  --pretendard-extrabold: 'Pretendard-ExtraBold', sans-serif;
+  --pretendard-black: 'Pretendard-Black', sans-serif;
+  --gmarket-light: 'GmarketSansLight', sans-serif;
+  --gmarket-medium: 'GmarketSansMedium', sans-serif;
+  --gmarket-bold: 'GmarketSansBold', sans-serif;
+}
+
+/* 전체설정 */
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #0d0d0d;
+}
+ul, ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  vertical-align: bottom;
+}
+body {
+  font-family: var(--pretendard-regular);
+  overflow: hidden;
+}
+
