@@ -1,0 +1,76 @@
+.section5 {
+  width: 100vw;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  opacity: 0;
+}
+.section5 .center {
+  width: fit-content;
+}
+.section5 .title {
+  padding-bottom: 60px;
+}
+.section5 .title h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.section5 .title h3 span {
+  font-family: var(--pretendard-bold);
+  color: var(--main-color);
+}
+.section5 .title h3 span.small {
+  font-size: 32px;
+}
+.section5 .title h3 span.big {
+  font-size: 50px;
+}
+.section5 .bottomBox {
+  display: flex;
+  gap: 40px;
+}
+.section5 .card {
+  background-color: #fff;
+  width: 420px;
+  border-radius: 28px;
+  padding: 40px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: -1px -1px 29px 0px rgba(255,87,34,0.3);
+  -webkit-box-shadow: -1px -1px 29px 0px rgba(255,87,34,0.3);
+  -moz-box-shadow: -1px -1px 29px 0px rgba(255,87,34,0.3);
+}
+.section5 .card img {
+  width: 150px;
+}
+.section5 .card .txtBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section5 .card .subTitle {
+  text-align: center;
+  color: var(--main-color);
+  font-family: var(--pretendard-bold);
+  font-size: 28px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.section5 .card .description {
+  width: 70%;
+}
+.section5 .card .description li {
+  text-align: center;
+  word-break: keep-all;
+  color: #565656;
+  font-family: var(--pretendard-medium);
+  font-size: 16px;
+  line-height: 1.4;
+}

@@ -1,0 +1,213 @@
+.section6 {
+  width: 100vw;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+}
+.section6 .bgBox {
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+.section6 .bgBox img {
+  width: 100%;
+}
+.section6 .firstBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+}
+.section6 .firstBox .txtBox {
+  display: flex;
+  gap: 10px;
+}
+.section6 .firstBox .txtBox .completeBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.section6 .firstBox .txtBox span {
+  color: #fff;
+  font-size: 46px;
+  font-family: var(--pretendard-bold);
+}
+.section6 .firstBox .txtBox span.small {
+  display: inline-block;
+  padding-top: 15px;
+}
+.section6 .firstBox .txtBox .complete {
+  font-size: 65px;
+  color: var(--main-color);
+  font-family: var(--pretendard-bold);
+}
+.section6 .firstBox p {
+  color: #fff;
+  font-size: 46px;
+  font-family: var(--pretendard-bold);
+}
+.section6 .secondBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 160px;
+  opacity: 0;
+}
+.section6 .secondBox .topBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.section6 .secondBox .topBox .small {
+  font-family: var(--pretendard-bold);
+  color: #fff;
+  font-size: 46px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.section6 .secondBox .topBox .big {
+  font-family: var(--pretendard-bold);
+  color: var(--main-color);
+  font-size: 80px;
+}
+.section6 .secondBox .contactBox {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.section6 .secondBox .contactBox p {
+  color: #fff;
+  font-size: 18px;
+  font-family: var(--pretendard-semiBold);
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+.section6 .secondBox .phoneNumber {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+}
+.section6 .secondBox .phoneNumber span {
+  color: #fff;
+  font-size: 18px;
+  font-family: var(--pretendard-medium);
+}
+
+.linkBtn {
+  cursor: pointer;
+  padding: 17px 30px;
+  border-radius: 50px;
+  border: none;
+  background-color: #fff;
+  display: flex;
+  gap: 12px;
+  width: fit-content;
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  opacity: 0;
+}
+.linkBtn.on {
+  animation: linkBtnOn 0.2s ease-in-out;
+  /* background-color: #fff1e4; */
+}
+@keyframes linkBtnOn {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.linkBtn span {
+  font-family: var(--pretendard-bold);
+  color: var(--main-color);
+  font-size: 20px;
+}
+
+.topBtn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #474747;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 150px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+}
+.topBtn.on {
+  animation: topBtnOn 0.2s ease-in-out;
+}
+@keyframes topBtnOn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid #5f5f5f;
+  opacity: 0;
+}
+footer .leftBox {}
+footer .leftBox .depth2ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .leftBox .depth1ul {
+  display: flex;
+  gap: 70px;
+}
+footer .leftBox .depth2ul .key {
+  font-family: var(--pretendard-bold);
+  color: #a7a7a7;
+}
+footer .leftBox .depth2ul .value {
+  font-family: var(--pretendard-medium);
+  color: #fff;
+}
+footer .rightBox {}
+footer .rightBox p {
+  font-family: var(--pretendard-medium);
+  color: #a7a7a7;
+}

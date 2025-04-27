@@ -10,17 +10,31 @@ import Section3 from './components/Section3/Section3';
 import Section4 from './components/Section4/Section4';
 import Section5 from './components/Section5/Section5';
 import Section6 from './components/Section6/Section6';
-import Section7 from './components/Section7/Section7';
-import Section8 from './components/Section8/Section8';
-import Section9 from './components/Section9/Section9';
-import Section10 from './components/Section10/Section10';
+
 
 function App() {
-
   const [activeIndex, setActiveIndex] = useState(0);
+  const [spotlightOpacity, setSpotlightOpacity] = useState(0);
+  const [peopleOpacity, setPeopleOpacity] = useState(0);
 
   const handleSlideChange = (swiper) => {
+    const newIndex = swiper.activeIndex;
+
     setActiveIndex(swiper.activeIndex);
+
+    if (newIndex <= 2) {
+      setSpotlightOpacity(0); // Section3 또는 그 이전이면 spotlight 사라짐
+    } else if (newIndex >= 3 && newIndex <= 6) {
+      setSpotlightOpacity(1); // Section4 spotlight 보임
+    } else if (newIndex >= 7) {
+      setSpotlightOpacity(0); // Section4 이후면 spotlight 사라짐
+    }
+
+    if (newIndex <= 7) {
+      setPeopleOpacity(0); // Section6 이전엔 사람들 안보임
+    } else if (newIndex >= 8) {
+      setPeopleOpacity(1); // Section6 또는 그 이후면 사람들 보임
+    }
   };
 
   
@@ -49,14 +63,9 @@ function App() {
       <Section1 activeIndex={activeIndex} />
       <Section2 activeIndex={activeIndex} />
       <Section3 activeIndex={activeIndex} />
-      <Section4 activeIndex={activeIndex} />
+      <Section4 activeIndex={activeIndex} spotlightOpacity={spotlightOpacity} />
       <Section5 activeIndex={activeIndex} />
-      <Section6 activeIndex={activeIndex} />
-      <Section7 activeIndex={activeIndex} />
-      <Section8 activeIndex={activeIndex} />
-      <Section9 activeIndex={activeIndex} />
-      <Section10 activeIndex={activeIndex} />
-
+      <Section6 activeIndex={activeIndex} peopleOpacity={peopleOpacity} />
       
     </>
   );

@@ -15,9 +15,6 @@ function Section3({ activeIndex }) {
         gsap.killTweensOf([
             videoRef.current,
             txtBoxRef.current,
-            // ".section4 .spotlightBg",
-            // ".strategyBox.index0 .imgBox",
-            // ".strategyBox.index0 .txtBox"
         ]);
 
         gsap.timeline()
@@ -25,18 +22,6 @@ function Section3({ activeIndex }) {
                 opacity: 1,
                 duration: 0.8
             }, 0)
-            // .to(".section4 .spotlightBg", {
-            //     opacity: 0,
-            //     duration: 0.8
-            // }, 0)
-            // .to(".strategyBox.index0 .imgBox", {
-            //     opacity: 0,
-            //     duration: 0.8
-            // }, 0)
-            // .to(".strategyBox.index0 .txtBox", {
-            //     opacity: 0,
-            //     duration: 0.8
-            // }, 0)
             .to(txtBoxRef.current, {
                 opacity: 1,
                 duration: 0.8

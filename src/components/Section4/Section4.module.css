@@ -9,6 +9,7 @@
   width: 100%;
   height: 100dvh;
   opacity: 0;
+  transition: opacity 0.8s ease-in-out;
 }
 .section4 .spotlightBg img {
   position: absolute;
@@ -21,7 +22,6 @@
   transform: translate(-50%, -50%);
   opacity: 0;
 }
-.strategyBox .imgBox img {}
 .strategyBox .txtBox {
   display: flex;
   flex-direction: column;
@@ -70,7 +70,6 @@
 .strategyBox .txtBox .title span {
   color: var(--main-color);
 }
-.strategyBox .txtBox .description {}
 .strategyBox .txtBox .description p {
   color: #fff;
   font-size: 20px;
