@@ -4,6 +4,7 @@ import { Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 import gsap from 'gsap';
 import { useRef, useState } from 'react';
+import Header from './components/Header/Header';
 import Section1 from './components/Section1/Section1';
 import Section2 from './components/Section2/Section2';
 import Section3 from './components/Section3/Section3';
@@ -16,11 +17,13 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [spotlightOpacity, setSpotlightOpacity] = useState(0);
   const [peopleOpacity, setPeopleOpacity] = useState(0);
+  const swiperContainerRef = useRef(null); // DOM용
+  const [swiperInstance, setSwiperInstance] = useState(null); // Swiper 인스턴스용
 
   const handleSlideChange = (swiper) => {
     const newIndex = swiper.activeIndex;
 
-    setActiveIndex(swiper.activeIndex);
+    setActiveIndex(newIndex);
 
     if (newIndex <= 2) {
       setSpotlightOpacity(0); // Section3 또는 그 이전이면 spotlight 사라짐
@@ -47,25 +50,29 @@ function App() {
         direction={'vertical'}
         modules={[ Mousewheel ]}
         onSlideChange={handleSlideChange}
+        onSwiper={(swiper) => setSwiperInstance(swiper)}
+        ref={swiperContainerRef}
       >
-        <SwiperSlide><div className='section'>slide1</div></SwiperSlide>
-        <SwiperSlide><div className='section'>slide2</div></SwiperSlide>
-        <SwiperSlide><div className='section'>slide3</div></SwiperSlide>
-        <SwiperSlide><div className='section'>slide4</div></SwiperSlide>
-        <SwiperSlide><div className='section'>slide5</div></SwiperSlide>
-        <SwiperSlide><div className='section'>slide6</div></SwiperSlide>
-        <SwiperSlide><div className='section'>slide7</div></SwiperSlide>
-        <SwiperSlide><div className='section'>slide8</div></SwiperSlide>
-        <SwiperSlide><div className='section'>slide9</div></SwiperSlide>
-        <SwiperSlide><div className='section'>slide10</div></SwiperSlide>
+        <SwiperSlide><div className='section'></div></SwiperSlide>
+        <SwiperSlide><div className='section'></div></SwiperSlide>
+        <SwiperSlide><div className='section'></div></SwiperSlide>
+        <SwiperSlide><div className='section'></div></SwiperSlide>
+        <SwiperSlide><div className='section'></div></SwiperSlide>
+        <SwiperSlide><div className='section'></div></SwiperSlide>
+        <SwiperSlide><div className='section'></div></SwiperSlide>
+        <SwiperSlide><div className='section'></div></SwiperSlide>
+        <SwiperSlide><div className='section'></div></SwiperSlide>
+        <SwiperSlide><div className='section'></div></SwiperSlide>
       </Swiper>
+
+      <Header activeIndex={activeIndex} swiperInstance={swiperInstance} />
 
       <Section1 activeIndex={activeIndex} />
       <Section2 activeIndex={activeIndex} />
       <Section3 activeIndex={activeIndex} />
       <Section4 activeIndex={activeIndex} spotlightOpacity={spotlightOpacity} />
       <Section5 activeIndex={activeIndex} />
-      <Section6 activeIndex={activeIndex} peopleOpacity={peopleOpacity} />
+      <Section6 activeIndex={activeIndex} peopleOpacity={peopleOpacity} swiperContainerRef={swiperContainerRef} swiperInstance={swiperInstance} />
       
     </>
   );

@@ -109,19 +109,18 @@
   cursor: pointer;
   padding: 17px 30px;
   border-radius: 50px;
-  border: none;
   background-color: #fff;
   display: flex;
   gap: 12px;
   width: fit-content;
   position: absolute;
+  z-index: 100;
   bottom: 12%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1000;
   opacity: 0;
 }
-.linkBtn.on {
+.linkBtn:active {
   animation: linkBtnOn 0.2s ease-in-out;
   /* background-color: #fff1e4; */
 }
@@ -149,20 +148,20 @@
   background-color: #474747;
   opacity: 0.5;
   position: absolute;
+  z-index: 100;
   bottom: 150px;
   right: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 1000;
   opacity: 0;
   user-select:none;
   -webkit-user-select:none;
   -moz-user-select:none;
   -ms-user-select:none;
 }
-.topBtn.on {
+.topBtn:active {
   animation: topBtnOn 0.2s ease-in-out;
 }
 @keyframes topBtnOn {
