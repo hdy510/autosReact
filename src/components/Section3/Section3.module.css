@@ -6,6 +6,8 @@
 }
 .section3 video {
   width: 100vw;
+  height: 100%;
+  object-fit: cover;
   transform: scaleX(-100%);
   opacity: 0;
 }

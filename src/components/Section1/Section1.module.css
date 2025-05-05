@@ -15,6 +15,8 @@
 }
 .section1Bg img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .section1 .txtBox {
   display: flex;
@@ -23,19 +25,42 @@
   left: 5vw;
   flex-direction: column;
 }
-.section1 .title1 h2 {
+.section1 .txtBox.isTablet {
+  bottom: 4vh;
+}
+.section1 .txtBox.isMobile {
+  bottom: 4vh;
+}
+.section1 .title1 {
   color: #fff;
   font-weight: 700;
   font-size: 75px;
 }
-.section1 .title1 p {
-  color: #fff;
+.section1 .title1.isLaptop {
+  font-size: 40px;
 }
+.section1 .title1.isTablet {
+  font-size: 34px;
+}
+.section1 .title1.isMobile {
+  font-size: 24px;
+}
+
+
 .section1 .title2 {
   color: #fff;
   font-family: var(--pretendard-black);
   font-size: 127px;
   padding-bottom: 10px;
+}
+.section1 .title2.isLaptop {
+  font-size: 70px;
+}
+.section1 .title2.isTablet {
+  font-size: 60px;
+}
+.section1 .title2.isMobile {
+  font-size: 40px;
 }
 .section1 .bigA {
   color: #fff;
@@ -47,4 +72,13 @@
   color: #fff;
   font-weight: 700;
   font-size: 24px;
+}
+.section1 .title3.isLaptop {
+  font-size: 18px;
+}
+.section1 .title3.isTablet {
+  font-size: 16px;
+}
+.section1 .title3.isMobile {
+  font-size: 14px;
 }
