@@ -9,10 +9,18 @@
   padding: 0 40px;
 }
 .logo {
-  
+  position: relative;
 }
 .logo img {
   width: 100%;
+}
+.logo .logoOrange {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+.logo .logoOrange.active {
+  opacity: 1;
 }
 .nav ul {
   display: flex;
@@ -26,6 +34,9 @@
   padding: 10px 20px;
   cursor: pointer;
   transition: all 0.5s;
+}
+.navList.brown {
+  color: #99847E;
 }
 .navList.active {
   color: var(--main-color);
