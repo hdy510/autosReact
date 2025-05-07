@@ -67,7 +67,7 @@ function Section4({ activeIndex, spotlightOpacity }) {
             </div>
 
             <div className={`${styles.strategyBox} ${styles.index1}`}>
-                <div className={styles.imgBox} ref={imgBoxRefs[1]}>
+                <div className={`${styles.imgBox} ${styles.appBox}`} ref={imgBoxRefs[1]}>
                     <img src={appScreen} alt="앱 화면 이미지" />
                     <img src={appScreen} alt="앱 화면 이미지" />
                 </div>

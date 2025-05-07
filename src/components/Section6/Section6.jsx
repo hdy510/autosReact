@@ -126,9 +126,9 @@ function Section6({ activeIndex, peopleOpacity, swiperContainerRef, swiperInstan
                 <div className={styles.firstBox} ref={firstBoxRef}>
                     <div className={styles.txtBox}>
                         <div className={styles.completeBox}>
-                            <img src={openQuotes} alt="여는 쌍따옴표 이미지" />
+                            <img className={styles.quote} src={openQuotes} alt="여는 쌍따옴표 이미지" />
                             <span className={styles.complete}>완전한</span>
-                            <img src={closeQuotes} alt="닫는 쌍따옴표 이미지" />
+                            <img className={styles.quote} src={closeQuotes} alt="닫는 쌍따옴표 이미지" />
                         </div>
                         <div>
                             <span className={styles.small}>무인 리테일로</span>

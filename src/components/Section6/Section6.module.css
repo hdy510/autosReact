@@ -6,11 +6,14 @@
 }
 .section6 .bgBox {
   width: 100%;
+  height: 100%;
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
 }
 .section6 .bgBox img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .section6 .firstBox {
   position: absolute;
@@ -48,8 +51,9 @@
 }
 .section6 .firstBox p {
   color: #fff;
-  font-size: 46px;
+  font-size: 40px;
   font-family: var(--pretendard-bold);
+  white-space: nowrap;
 }
 .section6 .secondBox {
   position: absolute;
@@ -74,11 +78,12 @@
   font-size: 46px;
   text-align: center;
   padding-bottom: 20px;
+  white-space: nowrap;
 }
 .section6 .secondBox .topBox .big {
   font-family: var(--pretendard-bold);
   color: var(--main-color);
-  font-size: 80px;
+  font-size: 70px;
 }
 .section6 .secondBox .contactBox {
   display: flex;
@@ -115,7 +120,7 @@
   width: fit-content;
   position: absolute;
   z-index: 100;
-  bottom: 12%;
+  bottom: 120px;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -139,6 +144,7 @@
   font-family: var(--pretendard-bold);
   color: var(--main-color);
   font-size: 20px;
+  white-space: nowrap;
 }
 
 .topBtn {
@@ -180,7 +186,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 30px 100px;
+  padding: 30px 40px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -188,14 +194,14 @@ footer {
   opacity: 0;
 }
 footer .leftBox {}
+footer .leftBox .depth1ul {
+  display: flex;
+  gap: 60px;
+}
 footer .leftBox .depth2ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-footer .leftBox .depth1ul {
-  display: flex;
-  gap: 70px;
 }
 footer .leftBox .depth2ul .key {
   font-family: var(--pretendard-bold);
@@ -209,4 +215,175 @@ footer .rightBox {}
 footer .rightBox p {
   font-family: var(--pretendard-medium);
   color: #a7a7a7;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1280px) {
+  .section6 .firstBox .txtBox span {
+    font-size: 40px;
+  }
+  .section6 .firstBox .txtBox span.small {
+    padding-top: 10px;
+  }
+  .section6 .firstBox .txtBox .complete {
+    font-size: 50px;
+  }
+  .section6 .firstBox p {
+    font-size: 32px;
+  }
+  .section6 .secondBox .topBox .small {
+    font-size: 30px;
+  }
+  .section6 .secondBox .topBox .big {
+    font-size: 46px;
+  }
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  footer .leftBox .depth1ul {
+    gap: 40px;
+  }
+  footer .leftBox .depth2ul {
+    gap: 10px;
+  }
+  footer .leftBox .depth2ul .key {
+    font-size: 14px;
+  }
+  footer .leftBox .depth2ul .value {
+    font-size: 14px;
+  }
+  .linkBtn {
+    padding: 13px 26px;
+    bottom: 150px;
+  }
+  .linkBtn span {
+    font-size: 18px;
+  }
+  .topBtn {
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+  }
+  .topBtn img {
+    width: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .section6 .firstBox .txtBox span {
+    font-size: 30px;
+  }
+  .section6 .firstBox .txtBox span.small {
+    padding-top: 8px;
+  }
+  .section6 .firstBox .txtBox .complete {
+    font-size: 40px;
+  }
+  .section6 .firstBox p {
+    font-size: 26px;
+  }
+  .section6 .secondBox {
+    transform: translate(-50%, -80%);
+  }
+  .section6 .secondBox .topBox {
+    gap: 20px;
+  }
+  .section6 .secondBox .topBox .small {
+    font-size: 26px;
+  }
+  .section6 .secondBox .topBox .big {
+    font-size: 40px;
+  }
+  .section6 .secondBox .contactBox p {
+    font-size: 16px;
+  }
+  .section6 .secondBox .phoneNumber span {
+    font-size: 16px;
+  }
+  footer {
+    padding: 20px;
+  }
+  footer .leftBox {
+    width: 100%;
+  }
+  footer .leftBox .depth1ul {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  footer .leftBox .depth1li {
+    width: 45%;
+  }
+  footer .leftBox .depth2ul .key {
+    font-size: 12px;
+  }
+  footer .leftBox .depth2ul .value {
+    font-size: 12px;
+  }
+  footer .rightBox p {
+    font-size: 12px;
+  }
+  .linkBtn {
+    padding: 13px 26px;
+    bottom: 200px;
+  }
+  .linkBtn img {
+    width: 20px;
+  }
+  .linkBtn span {
+    font-size: 16px;
+  }
+  .topBtn {
+    width: 44px;
+    height: 44px;
+    bottom: 50px;
+    right: 20px;
+  }
+  .topBtn img {
+    width: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .section6 .firstBox .txtBox .completeBox {
+    gap: 6px;
+  }
+  .quote {
+    width: 12px;
+  }
+  .section6 .firstBox .txtBox span {
+    font-size: 24px;
+  }
+  .section6 .firstBox .txtBox span.small {
+    padding-top: 4px;
+  }
+  .section6 .firstBox .txtBox .complete {
+    font-size: 30px;
+  }
+  .section6 .firstBox p {
+    font-size: 20px;
+  }
+  .section6 .secondBox {
+    transform: translate(-50%, -95%);
+  }
+  .section6 .secondBox .topBox .small {
+    font-size: 24px;
+  }
+  .section6 .secondBox .topBox .big {
+    font-size: 30px;
+  }
+  .section6 .secondBox .contactBox p {
+    font-size: 14px;
+  }
+  .section6 .secondBox .phoneNumber span {
+    font-size: 14px;
+  }
+
 }
