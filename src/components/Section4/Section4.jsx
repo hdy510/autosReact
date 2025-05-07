@@ -60,7 +60,7 @@ function Section4({ activeIndex, spotlightOpacity }) {
                         <p>완전한 무인매장</p>
                     </div>
                     <div className={styles.description}>
-                        <p>매장만 24시간 열려있는게 아닌 <span>24시간 본사 관제</span>를 통해 
+                        <p>매장만 24시간 열려있는게 아닌 24시간 본사 관제를 통해 
                         실시간으로 문제를 책임지고 해결해드립니다</p>
                     </div>
                 </div>
@@ -119,7 +119,8 @@ function Section4({ activeIndex, spotlightOpacity }) {
                     </div>
                     <div className={styles.title}>
                         <p>믿을만한 <span>고품질 제품</span></p>
-                        <p>지속적인 제품 라인업 <span>업데이트</span></p>
+                        <p>지속적인 제품 라인업</p>
+                        <p>업데이트</p>
                     </div>
                     <div className={styles.description}>
                         <p>모든 제품은 정식 유통 경로를 통해 공급, 철저한 품질 검증을 거쳐 입점하고

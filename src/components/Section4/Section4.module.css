@@ -28,10 +28,21 @@
 }
 .strategyBox .imgBox {
   opacity: 0;
-  width: 640px;
 }
 .strategyBox .imgBox img {
   width: 100%;
+}
+.strategyBox.index0 .imgBox {
+  width: 600px;
+}
+.strategyBox.index1 .imgBox {
+  width: 500px;
+}
+.strategyBox.index2 .imgBox {
+  width: 560px;
+}
+.strategyBox.index3 .imgBox {
+  width: 400px;
 }
 .appBox {
   display: flex;
@@ -41,31 +52,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 560px;
   height: 400px;
   opacity: 0;
 }
-.strategyBox.index0 .txtBox {
-  width: 560px;
-}
-.strategyBox.index1 .txtBox {
-  width: 650px;
-}
-.strategyBox.index2 .txtBox {
-  width: 600px;
-}
-.strategyBox.index3 .txtBox {
-  width: 700px;
-}
+
 .strategyBox .txtBox .indexBox {
   display: flex;
   align-items: center;
   gap: 20px;
   padding-bottom: 70px;
 }
-.strategyBox .txtBox .index {
-  color: #fff;
-  font-size: 26px;
-}
+.strategyBox .txtBox .indexBox img {}
 .strategyBox .txtBox .bar {
   background-color: var(--main-color);
   width: 100%;
@@ -76,7 +74,7 @@
 }
 .strategyBox .txtBox .title p {
   color: #fff;
-  font-size: 58px;
+  font-size: 50px;
   font-family: var(--pretendard-bold);
 }
 .strategyBox .txtBox .title span {
@@ -93,8 +91,31 @@
   color: var(--main-color);
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1920px) {
 
+}
+@media (max-width: 1280px) {
+  .strategyBox.index0 {
+    width: 90vw;
+  }
+  .strategyBox.index0 .imgBox {
+    width: auto;
+  }
+  .strategyBox.index0 .txtBox {
+    height: clamp(300px, 10vw, 400px);
+  }
+  .strategyBox .txtBox .indexBox {
+    padding-bottom: clamp(40px, 5vw, 70px);
+  }
+  .strategyBox .txtBox .indexBox img {
+    width: clamp(140px, 14vw, 183px);
+  }
+  .strategyBox .txtBox .title p {
+    font-size: clamp(30px, 4vw, 50px);
+  }
+  .strategyBox .txtBox .description p {
+    font-size: clamp(16px, 1.7vw, 20px);
+  }
 }
 @media (max-width: 768px) {
   .strategyBox {

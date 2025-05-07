@@ -76,6 +76,21 @@
 }
 
 @media (max-width: 1280px) {
+  .section5 .bottomBox {
+    gap: 20px;
+  }
+  .section5 .center {
+    padding-top: 50px;
+  }
+  .section5 .card {
+    width: 360px;
+  }
+  .section5 .card img {
+    width: 110px;
+  }
+  .section5 .card .subTitle {
+    font-size: 24px;
+  }
   .section5 .title h3 span.small {
     font-size: 22px;
   }
@@ -84,9 +99,10 @@
   }
 }
 @media (max-width: 768px) {
-  .section5 .card {
-    padding: 20px;
+  .section5 .center {
+    padding-top: 70px;
   }
+
   .section5 .title {
     padding-bottom: 40px;
   }
@@ -101,19 +117,39 @@
     align-items: center;
     gap: 20px;
   }
+  .section5 .card {
+    padding: 20px;
+  }
   .section5 .card img {
-    width: 100px;
+    width: 80px;
   }
   .section5 .card .subTitle {
     font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
   .section5 .card .description li {
     font-size: 15px;
   }
 }
 @media (max-width: 480px) {
+  .section5 .title {
+    padding-bottom: 40px;
+  }
+  .section5 .bottomBox {
+    gap: 14px;
+  }
   .section5 .card {
-    width: 95%;
+    width: 92%;
+  }
+  .section5 .card img {
+    width: 70px;
+  }
+  .section5 .card .subTitle {
+    font-size: 18px;
+  }
+  .section5 .card .description li {
+    font-size: 14px;
   }
   .section5 .title h3 span.small {
     font-size: 16px;
