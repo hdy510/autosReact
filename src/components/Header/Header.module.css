@@ -30,3 +30,37 @@
 .navList.active {
   color: var(--main-color);
 }
+
+@media (max-width: 1280px) {
+  .header {
+    flex-direction: column;
+    padding: 20px 40px;
+  }
+  .logo {
+    width: 200px;
+  }
+  .navList {
+    font-size: 16px;
+    font-family: var(--pretendard-normal);
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .nav ul {
+    gap: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    padding: 20px 20px;
+  }
+  .nav ul {
+    gap: 0;
+    width: 96vw;
+    justify-content: space-between;
+  }
+  .navList {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}

@@ -12,10 +12,10 @@ function Header({ activeIndex, swiperInstance }) {
   
   return (
     <header className={styles.header}>
-      <a href='/' rel='noopener noreferrer' className={styles.logo}>
+      <a href='/' rel='noopener noreferrer' className={`${styles.logo}`}>
         <img src={logo} alt="puffu autos logo" />
       </a>
-      <nav className={styles.nav}>
+      <nav className={`${styles.nav}`}>
         <ul>
           <li className={`${styles.navList} ${isActive(1, 2) ? styles.active : ''}`}
             onClick={() => handleNavClick(1)}

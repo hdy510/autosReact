@@ -60,33 +60,28 @@ function Section1({ activeIndex }) {
             }, '<90%');
     };
 
-    const getResponsiveClass = () => {
-        if (isMobile) return styles.isMobile;
-        if (isTablet) return styles.isTablet;
-        if (isLaptop) return styles.isLaptop;
-        return '';
-      };
+
 
     return (
         <div className={styles.section1}>
             <div className={styles.section1Bg} ref={section1BgRef}>
                 <img src={section1bg} alt="section1 주황색 가게 배경 이미지" />
             </div>
-            <div className={`${styles.txtBox} ${getResponsiveClass()}`} ref={txtBoxRef}>
+            <div className={`${styles.txtBox}`} ref={txtBoxRef}>
                 <div>
-                    <h2 className={`${styles.title1} ${getResponsiveClass()}`}>
+                    <h2 className={`${styles.title1}`}>
                         일 대신 일상을 <br />
                         부담 대신 여유를
                     </h2>
                 </div>
-                <h1 className={`${styles.title2} ${getResponsiveClass()}`}>
+                <h1 className={`${styles.title2}`}>
                     PUFFU{' '}
                     <span className={styles.bigA} ref={bigARef}>
                         A
                     </span>
                     UTOS
                 </h1>
-                <span className={`${styles.title3} ${getResponsiveClass()}`}>
+                <span className={`${styles.title3}`}>
                     푸푸오토스는 시간의 가치를 되찾고{(isMobile || isTablet) && <br/>} 더 자유롭고 의미있는 일상을 찾아 나서는{(isMobile || isTablet) && <br/>} 여러분을 응원합니다
                 </span>
             </div>

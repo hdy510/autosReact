@@ -25,60 +25,61 @@
   left: 5vw;
   flex-direction: column;
 }
-.section1 .txtBox.isTablet {
-  bottom: 4vh;
-}
-.section1 .txtBox.isMobile {
-  bottom: 4vh;
-}
 .section1 .title1 {
   color: #fff;
   font-weight: 700;
   font-size: 75px;
 }
-.section1 .title1.isLaptop {
-  font-size: 40px;
-}
-.section1 .title1.isTablet {
-  font-size: 34px;
-}
-.section1 .title1.isMobile {
-  font-size: 24px;
-}
-
-
 .section1 .title2 {
   color: #fff;
   font-family: var(--pretendard-black);
   font-size: 127px;
   padding-bottom: 10px;
 }
-.section1 .title2.isLaptop {
-  font-size: 70px;
-}
-.section1 .title2.isTablet {
-  font-size: 60px;
-}
-.section1 .title2.isMobile {
-  font-size: 40px;
-}
 .section1 .bigA {
   color: #fff;
   display: inline-block;
   transition: all 0.05s;
 }
-
 .section1 .title3 {
   color: #fff;
   font-weight: 700;
   font-size: 24px;
 }
-.section1 .title3.isLaptop {
-  font-size: 18px;
+
+@media (max-width: 1280px) {
+  .section1 .title1 {
+    font-size: 60px;
+  }
+  .section1 .title2 {
+    font-size: 90px;
+  }
+  .section1 .title3 {
+    font-size: 18px;
+  }
 }
-.section1 .title3.isTablet {
-  font-size: 16px;
+@media (max-width: 768px) {
+  .section1 .txtBox {
+    bottom: 4vh;
+  }
+  .section1 .title1 {
+    font-size: 50px;
+  }
+  .section1 .title2 {
+    font-size: 70px;
+  }
+  .section1 .title3 {
+    font-size: 16px;
+  }
 }
-.section1 .title3.isMobile {
-  font-size: 14px;
+@media (max-width: 480px) {
+  .section1 .title1 {
+    font-size: 30px;
+  }
+  .section1 .title2 {
+    font-size: 40px;
+  }
+  .section1 .title3 {
+    font-size: 14px;
+  }
 }
