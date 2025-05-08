@@ -23,7 +23,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  gap: 40px;
+  gap: clamp(50px, 5vw, 100px);
   align-items: center;
 }
 .strategyBox .imgBox {
@@ -36,7 +36,8 @@
   width: 600px;
 }
 .strategyBox.index1 .imgBox {
-  width: 500px;
+  width: 450px;
+  height: 550px;
 }
 .strategyBox.index2 .imgBox {
   width: 560px;
@@ -47,6 +48,22 @@
 .appBox {
   display: flex;
   gap: 20px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.strategyBox.index1 .imgBox img {
+  width: 46%;
+}
+.phoneMockUp1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.phoneMockUp2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .strategyBox .txtBox {
   display: flex;
@@ -95,14 +112,22 @@
 
 }
 @media (max-width: 1280px) {
-  .strategyBox.index0 {
+  /* .strategyBox {
+    gap: 40px;
+  } */
+  .strategyBox {
     width: 90vw;
+    gap: clamp(20px, 4vw, 50px);
   }
-  .strategyBox.index0 .imgBox {
+  .strategyBox .imgBox {
     width: auto;
   }
-  .strategyBox.index0 .txtBox {
-    height: clamp(300px, 10vw, 400px);
+  .strategyBox.index1 .imgBox {
+    height: clamp(300px, 46.8vw, 550px);
+  }
+  .strategyBox .txtBox {
+    /* height: clamp(300px, 10vw, 400px); */
+    height: auto;
   }
   .strategyBox .txtBox .indexBox {
     padding-bottom: clamp(40px, 5vw, 70px);
@@ -110,21 +135,86 @@
   .strategyBox .txtBox .indexBox img {
     width: clamp(140px, 14vw, 183px);
   }
+  .strategyBox .txtBox .title {
+    padding-bottom: clamp(40px, 5vw, 70px);
+  }
   .strategyBox .txtBox .title p {
     font-size: clamp(30px, 4vw, 50px);
   }
   .strategyBox .txtBox .description p {
-    font-size: clamp(16px, 1.7vw, 20px);
+    font-size: clamp(14px, 1.6vw, 20px);
   }
 }
 @media (max-width: 768px) {
   .strategyBox {
     flex-direction: column;
+    transform: translate(-50%, -45%);
+    gap: 50px;
   }
-  .strategyBox .imgBox {
-    width: 300px;
+  .strategyBox.index0 .imgBox {
+    width: 90%;
+    max-width: 400px;
+  }
+  .strategyBox.index1 .imgBox {
+    width: 90%;
+    max-width: 280px;
+    height: 300px;
+  }
+  .strategyBox.index2 .imgBox {
+    width: 90%;
+    max-width: 300px;
+  }
+  .strategyBox.index3 .imgBox {
+    width: 90%;
+    max-width: 200px;
+  }
+  .strategyBox .txtBox {
+    width: 90%;
+    max-width: 400px;
+  }
+  .strategyBox .txtBox .indexBox {
+    padding-bottom: 15px;
+  }
+  .strategyBox .txtBox .indexBox img {
+    width: 120px;
+  }
+  .strategyBox .txtBox .title {
+    padding-bottom: 10px;
+  }
+  .strategyBox .txtBox .description p {
+    font-family: var(--pretendard-normal);
   }
 }
 @media (max-width: 480px) {
+  .strategyBox {
+    top: unset;
+    left: unset;
+    transform: none;
+  }
+  .strategyBox.index1 .imgBox {
+    max-width: 200px;
+    height: 230px;
+  }
+  .strategyBox.index2 .imgBox {
+    /* max-width: 400px; */
+  }
+  .strategyBox .imgBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+  }
+  .strategyBox.index2 .imgBox {
+    transform: translate(-50%, -50%);
+  }
+  .strategyBox .txtBox {
+    position: fixed;
+    bottom: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .strategyBox .txtBox .title p {
+    font-size: 26px;
+  }
 
 }

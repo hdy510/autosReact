@@ -45,24 +45,28 @@
   }
 }
 @media (max-width: 768px) {
+  .section3 video {
+    object-position: -20vw center;
+  }
   .section3 .txtBox {
-    left: 45%;
+    top: 53%;
+    left: 50%;
   }
   .section3 .txtBox p {
     font-size: 24px;
+    text-align: center;
   }
   .section3 .txtBox p span {
     font-size: 34px;
   }
 }
 @media (max-width: 480px) {
-  .section3 .txtBox {
-    top: 50%;
-    left: 50%;
+  .section3 video {
+    object-position: -50vw center;
   }
+
   .section3 .txtBox p {
     font-size: 20px;
-    text-align: center;
   }
   .section3 .txtBox p span {
     font-size: 30px;

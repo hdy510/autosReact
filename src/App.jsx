@@ -11,6 +11,9 @@ import Section3 from './components/Section3/Section3';
 import Section4 from './components/Section4/Section4';
 import Section5 from './components/Section5/Section5';
 import Section6 from './components/Section6/Section6';
+import scrollDown from "./resources/scrollDown.png";
+import scrollDownOrange from "./resources/scrollDownOrange.png";
+
 
 
 function App() {
@@ -44,6 +47,25 @@ function App() {
 
   return (
     <>
+      <Header activeIndex={activeIndex} swiperInstance={swiperInstance} />
+
+      <Section1 activeIndex={activeIndex} />
+      <Section2 activeIndex={activeIndex} />
+      <Section3 activeIndex={activeIndex} />
+      <Section4 activeIndex={activeIndex} spotlightOpacity={spotlightOpacity} />
+      <Section5 activeIndex={activeIndex} />
+      <Section6 activeIndex={activeIndex} peopleOpacity={peopleOpacity} swiperContainerRef={swiperContainerRef} swiperInstance={swiperInstance} />
+      
+      {activeIndex !== 9 && (
+      <div class="scrollDown">
+        {activeIndex === 1 || activeIndex === 7 ? (
+          <img src={scrollDownOrange} alt="scroll down" />
+        ) : (
+          <img src={scrollDown} alt="scroll down" />
+        )}
+      </div>
+      )}
+
       <Swiper
         slidesPerView={1}
         mousewheel={true}
@@ -64,16 +86,6 @@ function App() {
         <SwiperSlide><div className='section'></div></SwiperSlide>
         <SwiperSlide><div className='section'></div></SwiperSlide>
       </Swiper>
-
-      <Header activeIndex={activeIndex} swiperInstance={swiperInstance} />
-
-      <Section1 activeIndex={activeIndex} />
-      <Section2 activeIndex={activeIndex} />
-      <Section3 activeIndex={activeIndex} />
-      <Section4 activeIndex={activeIndex} spotlightOpacity={spotlightOpacity} />
-      <Section5 activeIndex={activeIndex} />
-      <Section6 activeIndex={activeIndex} peopleOpacity={peopleOpacity} swiperContainerRef={swiperContainerRef} swiperInstance={swiperInstance} />
-      
     </>
   );
 }
