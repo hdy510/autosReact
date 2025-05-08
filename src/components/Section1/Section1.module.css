@@ -60,13 +60,13 @@
 }
 @media (max-width: 768px) {
   .section1 .txtBox {
-    bottom: 4vh;
+    bottom: 8vh;
   }
   .section1 .title1 {
     font-size: 50px;
   }
   .section1 .title2 {
-    font-size: 70px;
+    font-size: 60px;
   }
   .section1 .title3 {
     font-size: 16px;

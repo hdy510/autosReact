@@ -21,7 +21,6 @@
  font-size: 65px;
  font-family: var(--pretendard-bold);
  display: inline-block;
- 
 }
 .section2Bulb {
  width: 100px;
@@ -106,5 +105,23 @@
   }
 }
 @media (max-width: 480px) {
-
+  .section2Title h3 {
+    font-size: 26px;
+  }
+  .section2Bulb {
+    width: 46px;
+    padding-bottom: 18px;
+  }
+  .section2Description p {
+    font-size: 16px;
+  }
+  .section2Description span {
+    font-size: 20px;
+  }
+  .section2Cloud.index0 {
+    transform: scale(0.3);
+  }
+  .section2Cloud.index1 {
+    transform: scale(0.3);
+  }
 }

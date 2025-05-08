@@ -25,11 +25,13 @@ function Section1({ activeIndex }) {
                 duration: 1,
             }, 0)
             .to(txtBoxRef.current, { 
-                x: '0vw', 
                 opacity: 1, 
                 duration: 0.8 
             }, '<90%')
-            .to(bigARef.current, { scale: 1, 
+            .to(bigARef.current, { 
+                scale: 1, 
+                y: isMobile && '0',
+                x: '0', 
                 color: '#fff', 
                 duration: 0.8 
             }, 0);
@@ -45,18 +47,19 @@ function Section1({ activeIndex }) {
                 duration: 1 
             }, 0)
             .to(txtBoxRef.current, { 
-                x: '60vw', 
                 opacity: 1, 
                 duration: 0.8 
             }, 0)
             .to(bigARef.current, { 
+                x: !isMobile ? '60vw' : '30vw',
                 color: '#FF5722', 
                 duration: 0.8 
             }, '<10%')
             .to(bigARef.current, { 
                 opacity: 1,
-                scale: 13, 
-                duration: 0.8 
+                y: isMobile ? '10vh' : isTablet ? '10vh' : 0,
+                scale: !isMobile ? 13 : 10,
+                duration: 0.8
             }, '<90%');
     };
 
