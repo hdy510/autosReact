@@ -10,6 +10,8 @@ function Section1({ activeIndex }) {
     const txtBoxRef = useRef(null);
     const bigARef = useRef(null);
     const cloudBoxRef = useRef(null);
+    const cloud1Ref = useRef(null);
+    const cloud2Ref = useRef(null);
     const { isMobile, isTablet, isLaptop, isDesktop } = useResponsive();
     const [isBigAVisible, setIsBigAVisible] = useState(true);
 
@@ -43,7 +45,7 @@ function Section1({ activeIndex }) {
     }, [isBigAVisible]);
 
     const activateSlide = () => {
-        gsap.killTweensOf([section1BgRef.current, txtBoxRef.current, bigARef.current, cloudBoxRef.current]);
+        gsap.killTweensOf([section1BgRef.current, txtBoxRef.current, bigARef.current, cloudBoxRef.current, cloud1Ref.current, cloud2Ref.current]);
 
         gsap.timeline()
             .to(section1BgRef.current, { 
@@ -70,7 +72,10 @@ function Section1({ activeIndex }) {
             }, 0);
     };
     const deactivateSlide = () => {
-        gsap.killTweensOf([section1BgRef.current, txtBoxRef.current, bigARef.current, cloudBoxRef.current]);
+        gsap.killTweensOf([section1BgRef.current, txtBoxRef.current, bigARef.current, cloudBoxRef.current, cloud1Ref.current, cloud2Ref.current]);
+
+        gsap.set(cloud1Ref.current, { x: 0, opacity: 0 });
+        gsap.set(cloud2Ref.current, { x: 0, opacity: 0 });
 
         gsap.timeline()
             .to(section1BgRef.current, { 
@@ -84,16 +89,26 @@ function Section1({ activeIndex }) {
                 duration: 0.8 
             }, 0)
             .to(bigARef.current, { 
-                x: isMobile ? '30vw' : isTablet ? '40vw' : isLaptop ? '35vw' : isDesktop ? '55vw' : '60vw',
+                x: isMobile ? '30vw' : isTablet ? '30vw' : isLaptop ? '35vw' : isDesktop ? '45vw' : '60vw',
                 color: '#FF5722', 
                 duration: 0.8 
             }, '<10%')
             .to(bigARef.current, { 
                 opacity: 1,
                 y: isMobile ? '10vh' : isTablet ? '8vh' : isLaptop ? '6vh' : isDesktop ? '5vh' : '0',
-                scale: isMobile ? 10 : isTablet ? 11 : isLaptop ? 11 : isDesktop ? 10 : 13,
+                scale: isMobile ? 10 : isTablet ? 11 : isLaptop ? 11 : isDesktop ? 8 : 13,
                 duration: 0.8
             }, '<90%')
+            .to(cloud1Ref.current, {
+                opacity: 1,
+                x: isMobile ? 2 : isTablet ? 3 : isLaptop ? 4 : isDesktop ? 5 : 7,
+                duration: 0.8
+            }, "<20%")
+            .to(cloud2Ref.current, {
+                opacity: 1,
+                x: isMobile ? -2 : isTablet ? -3 : isLaptop ? -4 : isDesktop ? -5 : -7,
+                duration: 0.8
+            }, "<20%")
             .to(cloudBoxRef.current, {
                 opacity: 1,
                 visibility: 'visible',
@@ -120,8 +135,8 @@ function Section1({ activeIndex }) {
                     <div className={styles.bigA} ref={bigARef}>
                         A
                         <div className={styles.cloudBox} ref={cloudBoxRef}>
-                            <img className={`${styles.cloud} ${styles.index0}`} src={cloud} alt="구름 3d 아이콘" />
-                            <img className={`${styles.cloud} ${styles.index1}`} src={cloud} alt="구름 3d 아이콘" />
+                            <img ref={cloud1Ref} className={`${styles.cloud} ${styles.index0}`} src={cloud} alt="구름 3d 아이콘" />
+                            <img ref={cloud2Ref} className={`${styles.cloud} ${styles.index1}`} src={cloud} alt="구름 3d 아이콘" />
                         </div>
                     </div>
                     UTOS

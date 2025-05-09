@@ -29,11 +29,11 @@ function Section5({ activeIndex }) {
             }, 0)
             .from(card1Ref.current, {
                 y: isMobile ? -20 : isTablet ? -20 : 20,
-                duration: 0.8
+                duration: 0.5
             }, 0)
             .from(card2Ref.current, {
                 y: isMobile ? -20 : isTablet ? -20 : 20,
-                duration: 0.8
+                duration: 0.5
             }, "<20%")
       
     };

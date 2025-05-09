@@ -15,6 +15,7 @@
 .section2Title {
  display: flex;
  align-items: center;
+ opacity: 1;
 }
 .section2Title h3 {
  color: var(--main-color);
@@ -25,6 +26,9 @@
 .section2Bulb {
  width: 100px;
  padding-bottom: 20px;
+}
+.section2Description {
+  opacity: 1;
 }
 .section2Description p {
  color: #99847E;
