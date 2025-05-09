@@ -39,27 +39,7 @@
  font-family: var(--pretendard-bold);
  padding-right: 8px;
 }
-.section2CloudBox {
- width: 40vw;
- height: 70vh;
- position: absolute;
- bottom: 0;
- right: 0;
- opacity: 0;
-}
-.section2Cloud {
- position: absolute;
-}
-.section2Cloud.index0 {
- right: -5%;
- top: 10%;
- transform: scale(0.8);
-}
-.section2Cloud.index1 {
- left: 0;
- top: 55%;
- transform: scale(0.9);
-}
+
 
 @media (max-width: 1280px) {
   .section2 .txtBox {
@@ -76,12 +56,6 @@
   }
   .section2Description span {
     font-size: 30px;
-  }
-  .section2Cloud.index0 {
-    transform: scale(0.5);
-  }
-  .section2Cloud.index1 {
-    transform: scale(0.5);
   }
 }
 @media (max-width: 768px) {
@@ -100,9 +74,6 @@
   .section2Description span {
     font-size: 26px;
   }
-  .section2Cloud.index0 {
-    top: 30%;
-  }
 }
 @media (max-width: 480px) {
   .section2Title h3 {
@@ -117,11 +88,5 @@
   }
   .section2Description span {
     font-size: 20px;
-  }
-  .section2Cloud.index0 {
-    transform: scale(0.3);
-  }
-  .section2Cloud.index1 {
-    transform: scale(0.3);
   }
 }
