@@ -13,13 +13,14 @@ function Section1({ activeIndex }) {
     const { isMobile, isTablet, isLaptop, isDesktop } = useResponsive();
     const [isBigAVisible, setIsBigAVisible] = useState(true);
 
+
     useEffect(() => {
         activeIndex === 0 ? activateSlide() : deactivateSlide();
 
         setIsBigAVisible(activeIndex <= 1);
     }, [activeIndex]);
 
-     useEffect(() => {
+    useEffect(() => {
         if (!bigARef.current || !cloudBoxRef.current) return;
 
         if (isBigAVisible) {
@@ -64,6 +65,7 @@ function Section1({ activeIndex }) {
             }, 0)
             .to(cloudBoxRef.current, {
                 opacity: 0,
+                visibility: 'hidden',
                 duration: 0.8
             }, 0);
     };
@@ -94,8 +96,9 @@ function Section1({ activeIndex }) {
             }, '<90%')
             .to(cloudBoxRef.current, {
                 opacity: 1,
+                visibility: 'visible',
                 duration: 0.8
-            }, "<");
+            }, "<")
     };
 
 

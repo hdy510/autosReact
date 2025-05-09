@@ -14,6 +14,11 @@ function Section6({ activeIndex, peopleOpacity, swiperContainerRef, swiperInstan
     const linkBtnRef = useRef(null);
     const topBtnRef = useRef(null);
     const footerRef = useRef(null);
+    const text1Ref = useRef(null);
+    const text2Ref = useRef(null);
+    const text3Ref = useRef(null);
+    const text4Ref = useRef(null);
+    const contactBoxRef = useRef(null);
 
     useEffect(() => {
         activeIndex === 8 ? activateFristSlide() : deactivateFristSlide();
@@ -23,17 +28,34 @@ function Section6({ activeIndex, peopleOpacity, swiperContainerRef, swiperInstan
     const activateFristSlide = () => {
         gsap.killTweensOf([
             firstBoxRef.current,
+            text1Ref.current,
+            text2Ref.current,
         ]);
+
+        gsap.set(text1Ref.current, { opacity: 1, y: 0});
+        gsap.set(text2Ref.current, { opacity: 1, y: 0});
 
         gsap.timeline()
             .to(firstBoxRef.current, {
                 opacity: 1,
                 duration: 0.8
             }, 0)
+            .from(text1Ref.current, {
+                opacity: 0,
+                y: 20,
+                duration: 0.5
+            }, 0)
+            .from(text2Ref.current, {
+                opacity: 0,
+                y: 20,
+                duration: 0.5
+            }, "<30%")
     };
     const deactivateFristSlide = () => {
         gsap.killTweensOf([
             firstBoxRef.current,
+            text1Ref.current,
+            text2Ref.current,
         ]);
 
         gsap.timeline()
@@ -46,20 +68,49 @@ function Section6({ activeIndex, peopleOpacity, swiperContainerRef, swiperInstan
     const activateSecondSlide = () => {
         gsap.killTweensOf([
             secondBoxRef.current,
+            text3Ref.current,
+            text4Ref.current,
+            contactBoxRef.current,
             linkBtnRef.current,
             topBtnRef.current,
             footerRef.current,
         ]);
+
+        gsap.set(text3Ref.current, { opacity: 1, y: 0});
+        gsap.set(text4Ref.current, { opacity: 1, y: 0});
+        gsap.set(contactBoxRef.current, { opacity: 1, y: 0});
+        gsap.set(linkBtnRef.current, { opacity: 1, y: 0});
+
         gsap.timeline()
             .to(secondBoxRef.current, {
                 opacity: 1,
                 duration: 0.8
             }, 0)
+            .from(text3Ref.current, {
+                opacity: 0,
+                y: 20,
+                duration: 0.5
+            }, 0)
+            .from(text4Ref.current, {
+                opacity: 0,
+                y: 20,
+                duration: 0.5
+            }, "<30%")
+            .from(contactBoxRef.current, {
+                opacity: 0,
+                y: 20,
+                duration: 0.5
+            }, "<30%")
+            .from(linkBtnRef.current, {
+                opacity: 0,
+                y: 20,
+                duration: 0.5
+            }, "<30%")
             .to(linkBtnRef.current, {
                 opacity: 1,
                 pointerEvents: 'auto',
                 duration: 0.8
-            }, 0)
+            }, "<")
             .to(topBtnRef.current, {
                 opacity: 1,
                 pointerEvents: 'auto',
@@ -73,6 +124,9 @@ function Section6({ activeIndex, peopleOpacity, swiperContainerRef, swiperInstan
     const deactivateSecondSlide = () => {
         gsap.killTweensOf([
             secondBoxRef.current,
+            text3Ref.current,
+            text4Ref.current,
+            contactBoxRef.current,
             linkBtnRef.current,
             topBtnRef.current,
             footerRef.current,
@@ -124,7 +178,7 @@ function Section6({ activeIndex, peopleOpacity, swiperContainerRef, swiperInstan
                     <img src={people} alt="노을을 보며 앉아있는 사람들 이미지" />
                 </div>
                 <div className={styles.firstBox} ref={firstBoxRef}>
-                    <div className={styles.txtBox}>
+                    <div className={styles.txtBox} ref={text1Ref}>
                         <div className={styles.completeBox}>
                             <img className={styles.quote} src={openQuotes} alt="여는 쌍따옴표 이미지" />
                             <span className={styles.complete}>완전한</span>
@@ -134,17 +188,17 @@ function Section6({ activeIndex, peopleOpacity, swiperContainerRef, swiperInstan
                             <span className={styles.small}>무인 리테일로</span>
                         </div>
                     </div>
-                    <p>여러분의 소중한 것을 되찾아 드리겠습니다</p>
+                    <p ref={text2Ref}>여러분의 소중한 것을 되찾아 드리겠습니다</p>
                 </div>
                 <div className={styles.secondBox} ref={secondBoxRef}>
                     <div className={styles.topBox}>
                         <div className={styles.txtBox}>
-                            <p className={styles.small}>새로운 스마트 리테일의 시대, </p>
-                            <p className={styles.small}>
+                            <p className={styles.small} ref={text3Ref}>새로운 스마트 리테일의 시대, </p>
+                            <p className={styles.small} ref={text4Ref}>
                                 <span className={styles.big}>푸푸 오토스</span> 와 함께 시작하세요
                             </p>
                         </div>
-                        <div className={styles.contactBox}>
+                        <div className={styles.contactBox} ref={contactBoxRef}>
                             <p>CONTACT</p>
                             <div className={styles.phoneNumber}>
                                 <img src={phoneIcon} alt="전화 아이콘" />

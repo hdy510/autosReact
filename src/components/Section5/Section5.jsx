@@ -3,9 +3,13 @@ import clock3d from '../../resources/clock3d.png';
 import energy3d from '../../resources/energy3d.png';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import useResponsive from '../../hooks/useResponsive';
 
 function Section5({ activeIndex }) {
     const section5Ref = useRef(null);
+    const card1Ref = useRef(null);
+    const card2Ref = useRef(null);
+    const { isMobile, isTablet, isLaptop, isDesktop } = useResponsive();
 
     useEffect(() => {
         activeIndex === 7 ? activateSlide() : deactivateSlide();
@@ -14,6 +18,8 @@ function Section5({ activeIndex }) {
     const activateSlide = () => {
         gsap.killTweensOf([
             section5Ref.current,
+            card1Ref.current,
+            card2Ref.current
         ]);
 
         gsap.timeline()
@@ -21,11 +27,22 @@ function Section5({ activeIndex }) {
                 opacity: 1,
                 duration: 0.8
             }, 0)
+            .from(card1Ref.current, {
+                y: isMobile ? -20 : isTablet ? -20 : 20,
+                duration: 0.8
+            }, 0)
+            .from(card2Ref.current, {
+                y: isMobile ? -20 : isTablet ? -20 : 20,
+                duration: 0.8
+            }, "<20%")
+      
     };
 
     const deactivateSlide = () => {
         gsap.killTweensOf([
             section5Ref.current,
+            card1Ref.current,
+            card2Ref.current
         ]);
 
         gsap.timeline()
@@ -33,6 +50,7 @@ function Section5({ activeIndex }) {
                 opacity: 0,
                 duration: 0.8
             }, 0)
+      
     };
 
     return (
@@ -45,7 +63,7 @@ function Section5({ activeIndex }) {
             </h3>
           </div>
           <div className={styles.bottomBox}>
-            <div className={styles.card}>
+            <div className={styles.card} ref={card1Ref}>
               <img src={clock3d} alt="카드 시계 3d 아이콘" />
               <div className={styles.txtBox}>
                 <p className={styles.subTitle}>시간의 가치를 돌려주는 혁신</p>
@@ -54,7 +72,7 @@ function Section5({ activeIndex }) {
                 </ul>
               </div>
             </div>
-            <div className={styles.card}>
+            <div className={styles.card} ref={card2Ref}>
               <img src={energy3d} alt="카드 에너지 3d 아이콘" />
               <div className={styles.txtBox}>
                 <p className={styles.subTitle}>무인 시스템을 통한 에너지 절약</p>
