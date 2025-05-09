@@ -1,7 +1,7 @@
 import styles from './Section1.module.css';
 import section1bg from '../../resources/section1bg.png';
 import cloud from '../../resources/cloud.png';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import useResponsive from '../../hooks/useResponsive';
 
@@ -11,10 +11,35 @@ function Section1({ activeIndex }) {
     const bigARef = useRef(null);
     const cloudBoxRef = useRef(null);
     const { isMobile, isTablet, isLaptop, isDesktop } = useResponsive();
+    const [isBigAVisible, setIsBigAVisible] = useState(true);
 
     useEffect(() => {
         activeIndex === 0 ? activateSlide() : deactivateSlide();
+
+        setIsBigAVisible(activeIndex <= 1);
     }, [activeIndex]);
+
+     useEffect(() => {
+        if (!bigARef.current || !cloudBoxRef.current) return;
+
+        if (isBigAVisible) {
+            gsap.to([bigARef.current, cloudBoxRef.current], {
+                opacity: 1,
+                duration: 0.5,
+                onStart: () => {
+                    gsap.set([bigARef.current, cloudBoxRef.current], { visibility: 'visible' });
+                },
+            });
+        } else {
+            gsap.to([bigARef.current, cloudBoxRef.current], {
+                opacity: 0,
+                duration: 0.5,
+                onComplete: () => {
+                    gsap.set([bigARef.current, cloudBoxRef.current], { visibility: 'hidden' });
+                },
+            });
+        }
+    }, [isBigAVisible]);
 
     const activateSlide = () => {
         gsap.killTweensOf([section1BgRef.current, txtBoxRef.current, bigARef.current, cloudBoxRef.current]);

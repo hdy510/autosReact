@@ -41,6 +41,8 @@ function App() {
     } else if (newIndex >= 8) {
       setPeopleOpacity(1); // Section6 또는 그 이후면 사람들 보임
     }
+
+
   };
 
   

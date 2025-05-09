@@ -1,6 +1,6 @@
 import styles from './Section3.module.css';
 import sandClock from '../../resources/sandClock.mp4';
-import { useEffect, useRef } from 'react';
+import { use, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 function Section3({ activeIndex }) {
@@ -43,10 +43,11 @@ function Section3({ activeIndex }) {
                 opacity: 0,
                 duration: 0.8
             }, 0);
+            
     };
 
     return (
-        <div className={styles.section3}> 
+        <div className={styles.section3}>
             <video ref={videoRef} autoPlay loop muted>
                 <source src={sandClock} type="video/mp4" />
             </video>
