@@ -29,7 +29,7 @@ function Header({ activeIndex, swiperInstance }) {
           <li className={getNavClass(1, 2)} onClick={() => handleNavClick(1)}>How We Think</li>
           <li className={getNavClass(3, 6)} onClick={() => handleNavClick(3)}>Strategy</li>
           <li className={getNavClass(7, 7)} onClick={() => handleNavClick(7)}>Society</li>
-          <li className={getNavClass(8, 9)} onClick={() => handleNavClick(8)}>Contact</li>
+          <li className={getNavClass(8, 9)} onClick={() => handleNavClick(9)}>Contact</li>
         </ul>
       </nav>
     </header>

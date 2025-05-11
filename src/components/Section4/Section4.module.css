@@ -53,7 +53,8 @@
   height: 100%;
 }
 .strategyBox.index1 .imgBox img {
-  width: 46%;
+  /* phoneMockUp1,2 사용시 아래 width 주석 해제
+  width: 46%; */
 }
 .phoneMockUp1 {
   position: absolute;
@@ -64,6 +65,9 @@
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.phoneMockUp3 {
+  
 }
 .strategyBox .txtBox {
   display: flex;

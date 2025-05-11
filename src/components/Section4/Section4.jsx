@@ -7,6 +7,7 @@ import strategy3 from '../../resources/STRATEGY3.png';
 import strategy4 from '../../resources/STRATEGY4.png';
 import appScreen from '../../resources/appScreen.png';
 import usingPhone from '../../resources/usingPhone.png';
+import phoneMockUp from '../../resources/phoneMockUp.png';
 import kiosk from '../../resources/kiosk.png';
 import highquality from '../../resources/highquality.png';
 import { useEffect, useRef } from 'react';
@@ -90,8 +91,9 @@ function Section4({ activeIndex, spotlightOpacity }) {
             <div className={`${styles.strategyBox} ${styles.index1}`}>
                 <div className={styles.imgBox} ref={imgBoxRefs[1]}>
                     <div className={styles.appBox}>
-                        <img className={styles.phoneMockUp1} src={appScreen} alt="앱 화면 이미지" />
-                        <img className={styles.phoneMockUp2} src={appScreen} alt="앱 화면 이미지" />
+                        {/* <img className={styles.phoneMockUp1} src={appScreen} alt="앱 화면 이미지" />
+                        <img className={styles.phoneMockUp2} src={appScreen} alt="앱 화면 이미지" /> */}
+                        <img className={styles.phoneMockUp3} src={phoneMockUp} alt="앱 화면 이미지" />
                     </div>
                 </div>
                 <div className={styles.txtBox} ref={txtBoxRefs[1]}>

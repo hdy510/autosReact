@@ -16,6 +16,7 @@
 }
 .logo .logoOrange {
   position: absolute;
+  top: 4px;
   left: 0;
   opacity: 0;
 }
@@ -49,6 +50,9 @@
   }
   .logo {
     width: 200px;
+  }
+  .logo .logoOrange {
+    top: 5px;
   }
   .navList {
     font-size: 16px;

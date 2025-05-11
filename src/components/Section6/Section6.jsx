@@ -1,5 +1,5 @@
 import styles from './Section6.module.css';
-import people from '../../resources/people.png';
+import people from '../../resources/people.jpg';
 import openQuotes from '../../resources/openQuotes.png';
 import closeQuotes from '../../resources/closeQuotes.png';
 import phoneIcon from '../../resources/phoneIcon.png';

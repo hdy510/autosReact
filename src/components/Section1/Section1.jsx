@@ -1,5 +1,5 @@
 import styles from './Section1.module.css';
-import section1bg from '../../resources/section1bg.png';
+import section1bg from '../../resources/section1bg.jpg';
 import cloud from '../../resources/cloud.png';
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';

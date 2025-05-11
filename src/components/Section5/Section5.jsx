@@ -1,6 +1,6 @@
 import styles from './Section5.module.css';
-import clock3d from '../../resources/clock3d.png';
-import energy3d from '../../resources/energy3d.png';
+import clock3d from '../../resources/clock3d.jpg';
+import energy3d from '../../resources/energy3d.jpg';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import useResponsive from '../../hooks/useResponsive';
