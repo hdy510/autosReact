@@ -214,25 +214,19 @@ function Section6({ activeIndex, peopleOpacity, swiperContainerRef, swiperInstan
                             <li className={styles.depth1li}>
                                 <ul className={styles.depth2ul}>
                                     <li className={styles.key}>CEO</li>
-                                    <li className={styles.value}>홍길동</li>
+                                    <li className={styles.value}>원태범</li>
                                 </ul>
                             </li>
                             <li className={styles.depth1li}>
                                 <ul className={styles.depth2ul}>
-                                    <li className={styles.key}>BUSINESS NUMBER</li>
-                                    <li className={styles.value}>000-00-00000 | 대표: OOO</li>
+                                    <li className={styles.key}>TEL</li>
+                                    <li className={styles.value}>070-4242-2000</li>
                                 </ul>
                             </li>
                             <li className={styles.depth1li}>
                                 <ul className={styles.depth2ul}>
                                     <li className={styles.key}>ADDRESS</li>
                                     <li className={styles.value}>35372 대전 서구 관저중로95번길 74 4층</li>
-                                </ul>
-                            </li>
-                            <li className={styles.depth1li}>
-                                <ul className={styles.depth2ul}>
-                                    <li className={styles.key}>TEL</li>
-                                    <li className={styles.value}>042-000-0000</li>
                                 </ul>
                             </li>
                         </ul>
