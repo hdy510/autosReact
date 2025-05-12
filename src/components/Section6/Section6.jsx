@@ -202,7 +202,7 @@ function Section6({ activeIndex, peopleOpacity, swiperContainerRef, swiperInstan
                             <p>CONTACT</p>
                             <div className={styles.phoneNumber}>
                                 <img src={phoneIcon} alt="전화 아이콘" />
-                                <span>042-000-0000</span>
+                                <span>070-4242-2000</span>
                             </div>
                         </div>
                     </div>
