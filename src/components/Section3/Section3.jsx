@@ -1,5 +1,6 @@
 import styles from './Section3.module.css';
 import sandClock from '../../resources/sandClock.mp4';
+import black from '../../resources/black.jpg';
 import { use, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
@@ -48,7 +49,7 @@ function Section3({ activeIndex }) {
 
     return (
         <div className={styles.section3}>
-            <video ref={videoRef} autoPlay loop muted>
+            <video ref={videoRef} autoPlay loop muted poster={black}>
                 <source src={sandClock} type="video/mp4" />
             </video>
             <div className={styles.txtBox} ref={txtBoxRef}>

@@ -385,5 +385,7 @@ footer .rightBox p {
   .section6 .secondBox .phoneNumber span {
     font-size: 14px;
   }
-
+  .linkBtn {
+    bottom: 230px;
+  }
 }
