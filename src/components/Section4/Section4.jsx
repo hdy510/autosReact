@@ -104,7 +104,6 @@ function Section4({ activeIndex, spotlightOpacity }) {
                     <div className={styles.title} ref={titleRefs[1]}>
                         <p><span>스마트 IoT 시스템</span>을 활용한</p>
                         <p>실시간 매장 관리 체계 구축</p>
-                        <p>완전한 무인매장</p>
                     </div>
                     <div className={styles.description} ref={descriptionRefs[1]}>
                         <p>재고관리, 판매 데이터 분석, 매장 유지보수까지
