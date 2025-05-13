@@ -335,6 +335,9 @@ footer .rightBox p {
     padding: 13px 26px;
     bottom: 200px;
   }
+  .linkBtn:active {
+    animation: unset
+  }
   .linkBtn img {
     width: 20px;
   }

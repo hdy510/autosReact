@@ -237,7 +237,7 @@ function Section6({ activeIndex, peopleOpacity, swiperContainerRef, swiperInstan
                 </footer>
             </div>
 
-            <a href='https://brand.puffu.co.kr/' 
+            {/* <a href='https://brand.puffu.co.kr/' 
                 target='_blank' 
                 rel='noopener noreferrer'
                 className={styles.linkBtn} 
@@ -246,7 +246,16 @@ function Section6({ activeIndex, peopleOpacity, swiperContainerRef, swiperInstan
             >
                 <img src={marketIcon} alt="가게 아이콘" />
                 <span>가맹문의 페이지 이동</span>
-            </a>
+            </a> */}
+            <button 
+                className={styles.linkBtn} 
+                ref={linkBtnRef} 
+                onWheel={handleWheel}
+                onClick={() => window.open('https://brand.puffu.co.kr/', '_blank', 'noopener,noreferrer')}
+            >
+                <img src={marketIcon} alt="가게 아이콘" />
+                <span>가맹문의 페이지 이동</span>
+            </button>
 
             <div className={styles.topBtn} ref={topBtnRef} onWheel={handleWheel} onClick={handleTopBtnClick}>
                 <img src={arrowTop} alt="top 버튼 아이콘" />

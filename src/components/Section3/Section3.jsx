@@ -49,7 +49,7 @@ function Section3({ activeIndex }) {
 
     return (
         <div className={styles.section3}>
-            <video ref={videoRef} autoPlay loop muted poster={black}>
+            <video ref={videoRef} autoPlay loop muted playsInline poster={black}>
                 <source src={sandClock} type="video/mp4" />
             </video>
             <div className={styles.txtBox} ref={txtBoxRef}>

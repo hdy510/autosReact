@@ -95,4 +95,6 @@ body {
   font-family: var(--pretendard-regular);
   overflow: hidden;
 }
-
+video::-webkit-media-controls {
+  display: none !important;
+}
